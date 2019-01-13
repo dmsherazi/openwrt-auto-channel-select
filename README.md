@@ -3,13 +3,13 @@ Automatic Wi-Fi channel selection script for OpenWRT and supported systems
 
 ## Overview
 
-This little script will scan wireless networks around you and pick the best (least congested) frequency channel (1, 6 or 11).
+This little script will scan wireless networks around you and pick the best (least congested) frequency channel (1, 6 or 11) or 4 and 9 if it cant decide about 1 6 and 11.
 It relies on ```iw [device] scan``` and it makes several scans with delays between them for increased accuracy.
 
 ## Usage
 
 ```bash
-$ ./setAutoChannel.sh [interface index]
+$ ./setAutoChannel.sh [interface index] [no of scan iterations default=3]
 ```
 
 Where interface index is the index number of the wireless interface you are insterested in (eg. if you want to pick a channel for wlan0, pass 0 here)
